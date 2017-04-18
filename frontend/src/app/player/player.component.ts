@@ -1,4 +1,6 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
+import {MdIconRegistry} from '@angular/material';
+import {DomSanitizer} from '@angular/platform-browser';
 
 declare const soundManager: any;
 
@@ -13,7 +15,8 @@ export class PlayerComponent implements OnInit {
   private browser;
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
 

@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdCardModule, MdIconModule, MdToolbarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,11 @@ import { PlayerComponent } from './player/player.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

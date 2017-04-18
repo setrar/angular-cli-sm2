@@ -1,10 +1,24 @@
-<p>
-  player works!
-</p>
-<a (click)="choose()">choose</a>
-<a (click)="play()">play</a>
-<a (click)="stop()">stop</a>
 
-<a (click)="detectIE()">detect</a>
+<md-toolbar color="primary">
+  <button class="app-icon-button" (click)="sidenav.toggle()">
+    <i class="material-icons app-toolbar-menu">player works!</i>
+  </button>
+
+  Angular Material2 Example App
+
+  <span class="app-toolbar-filler"></span>
+  <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+</md-toolbar>
+
+
+<md-card>
+  <a  (click)="choose()"><i class="material-icons">file_download</i></a>
+  <a  (click)="play()"><i class="material-icons">play_arrow</i></a>
+  <a  (click)="stop()"><i class="material-icons">stop</i></a>
+</md-card>
+
+
+
+<a (click)="detectIE()"><i class="material-icons">face</i>detect</a>
 
 {{browser}}
