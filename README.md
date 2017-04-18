@@ -25,3 +25,22 @@ $ mkdir src/assets/sm2
 $ cp -R node_modules/soundmanager2/swf src/assets/sm2/
 ```
 
+# Material
+
+```
+$ npm install --save @angular/material
+```
+
+Slide components need hammer
+```
+$ npm install --save hammerjs
+```
+
+Update src/style.scss
+
+```
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+```
+
+Include MaterialModule
