@@ -8,7 +8,7 @@ $ cd frontend
 
 install soundmanager2
 ```
-$ npm install soundmanager2 --save
+$ npm install --save soundmanager2
 ```
 
 
@@ -24,3 +24,4 @@ copy all flash files to assets folder
 $ mkdir src/assets/sm2
 $ cp -R node_modules/soundmanager2/swf src/assets/sm2/
 ```
+
