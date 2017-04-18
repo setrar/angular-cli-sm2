@@ -12,7 +12,7 @@ $ npm install --save soundmanager2
 ```
 
 
-Edit .angular-cli.json  i
+Edit `.angular-cli.json`by adding
 ```
       "scripts": [
         "../node_modules/soundmanager2/script/soundmanager2-jsmin.js"
