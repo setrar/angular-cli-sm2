@@ -1,5 +1,5 @@
 
-<md-toolbar color="primary">
+<md-toolbar class="mat-accent">
 
   <md-card>
     <a  (click)="choose()"><i class="material-icons">file_download</i></a>
@@ -7,7 +7,9 @@
     <a  (click)="stop()"><i class="material-icons">stop</i></a>
   </md-card>
 
-  <button (click)="detectIE()">
+</md-toolbar>
+
+<button (click)="detectBrowser()">
     <i class="material-icons">works</i>Browser Information
   </button>
 
@@ -15,4 +17,3 @@
     {{browser}}
   </md-card>
 
-</md-toolbar>

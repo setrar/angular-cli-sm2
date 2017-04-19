@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PlayerComponent } from './player/player.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdCardModule, MdIconModule, MdToolbarModule} from '@angular/material';
+import {DetectBrowserService} from './shared/detect-browser.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {MdCardModule, MdIconModule, MdToolbarModule} from '@angular/material';
     MdIconModule,
     MdCardModule
   ],
-  providers: [],
+  providers: [DetectBrowserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
