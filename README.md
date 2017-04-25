@@ -1,5 +1,42 @@
 # Running SoundManager2 with Angular CLI
 
+
+## play backend
+
+update build.sbt
+
+```scala
+
+/* ================================= WEBPACK ================================== */
+
+val frontEndProjectName = "frontend"
+val backEndProjectName = "backend"
+val distDirectory = ".." + backEndProjectName + "public/dist"
+
+// Starts: angularCLI build task
+val frontendDirectory = baseDirectory {_ /".."/frontEndProjectName}
+
+val ng = sys.props("os.name").toLowerCase match {
+  case os if os.contains("win") => "cmd /c ng"
+  case _ => "ng"
+}
+
+val params = sys.props("os.name").toLowerCase match {
+  case os if os.contains("win") => " build --deploy-url /dist --output-path ..\\backend\\public\\dist --progress "
+  case _ => " build --deploy-url /dist --output-path ../backend/public/dist --progress "
+}
+
+val ngBuild = taskKey[Unit]("ng build task.")
+ngBuild := { Process( ng + params , frontendDirectory.value) ! }
+(packageBin in Universal) <<= (packageBin in Universal) dependsOn ngBuild
+// Ends.
+```
+
+
+
+
+
+
 ```
 $ ng new frontend --style=scss
 $ cd frontend
@@ -90,3 +127,11 @@ Update src/style.scss
 ```
 
 https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
+
+## detect browser
+
+```
+$ npm install detect-browser --save
+```
+
+tey mediaelement
