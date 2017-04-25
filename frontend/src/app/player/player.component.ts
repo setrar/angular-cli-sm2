@@ -45,10 +45,11 @@ export class PlayerComponent implements OnInit {
           },
           volume: 100
         });
-        console.log('supported');
+        console.log('Chrome and Firefox - Player : ');
         break;
 
       case 'edge':
+      case 'safari':
         this.soundObject = soundManager.createSound({
           id: 'soundid',
           serverURL: '', // Empty when HLS
@@ -71,7 +72,7 @@ export class PlayerComponent implements OnInit {
           },
           volume: 100
         });
-        console.log('kinda ok');
+        console.log('Edge and Safari - Player');
         break;
 
       default:

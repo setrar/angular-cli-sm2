@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     switch (browser && browser.name) {
-      case 'chrome':
       case 'firefox':
+      case 'chrome':
         soundManager.setup({
           url: '/assets/sm2/swf/',
           preferFlash: true,
@@ -26,7 +26,8 @@ export class AppComponent implements OnInit {
             console.error('can\'t load sound manager');
           }
         });
-        break;
+        console.log('Chrome and Firefox - Setup');
+      break;
 
       case 'edge':
         break;
