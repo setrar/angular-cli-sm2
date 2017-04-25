@@ -7,7 +7,7 @@ update build.sbt
 
 ```scala
 
-/* ================================= WEBPACK ================================== */
+/* ================================= ng build ================================== */
 
 val frontEndProjectName = "frontend"
 val backEndProjectName = "backend"
